@@ -124,14 +124,21 @@ export default function Login() {
       </div>
 
       {/* Right Pane - Feature/Branding Section */}
-      <div className="hidden lg:flex w-1/2 flex-col justify-between  px-36 text-white" 
+      <div className="relative hidden lg:flex w-1/2 flex-col justify-between  px-36 text-white" 
            style={{
              background: 'radial-gradient(circle at top right, #332014 0%, #151515 45%), #151515', 
              fontFamily: 'Inter, sans-serif'
            }}>
         
         {/* Subtle grid pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', size: '40px 40px' }} />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+            backgroundSize: '40px 40px',
+          }}
+        />
         
         <div className="relative z-10 max-w-xl self-center mt-16">
           {/* Label */}
