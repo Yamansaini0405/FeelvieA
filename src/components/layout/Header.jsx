@@ -1,8 +1,25 @@
 import { Menu, Bell } from "lucide-react";
+import { useLocation } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
 export default function Header({ onMenuClick }) {
   const { logout } = useAuth();
+  const location = useLocation();
+
+  // Map routes to breadcrumb titles
+  const routeTitles = {
+    "/": "Dashboard",
+    "/users": "Users",
+    "/carousels": "Carousels",
+    "/coupons": "Coupons",
+    "/queries": "Queries",
+    "/plans": "Plans",
+    "/credits": "Credits",
+    "/image-history": "Image History",
+    "/subscriptions": "Subscriptions",
+  };
+
+  const currentTitle = routeTitles[location.pathname] || "Dashboard";
 
   return (
     <header className="sticky top-0 z-30 flex h-14 items-center justify-between border-b border-neutral-100 bg-white/80 px-6 backdrop-blur">
@@ -19,7 +36,7 @@ export default function Header({ onMenuClick }) {
       <div className="hidden lg:flex items-center gap-2 text-xs text-neutral-500 font-medium">
         <span>Feelvie</span>
         <span>&gt;</span>
-        <span className="text-neutral-900">Dashboard</span>
+        <span className="text-neutral-900">{currentTitle}</span>
       </div>
 
       {/* Right Controls */}
