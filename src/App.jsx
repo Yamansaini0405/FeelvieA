@@ -12,6 +12,7 @@ import PlansPage from "./pages/plans/PlansPage";
 import CreditsPage from "./pages/credits/CreditsPage";
 import ImageHistoryPage from "./pages/history/ImageHistoryPage";
 import QueriesPage from "./pages/queries/QueriesPage";
+import UserSubscriptions from "./pages/subscriptions/UserSubscriptions";
 
 export default function App() {
   return (
@@ -35,6 +36,7 @@ export default function App() {
             <Route path="/plans" element={<PlansPage />} />
             <Route path="/credits" element={<CreditsPage />} />
             <Route path="/image-history" element={<ImageHistoryPage />} />
+            <Route path="/user-subscriptions" element={<UserSubscriptions />} />
           </Route>
         </Routes>
       </BrowserRouter>

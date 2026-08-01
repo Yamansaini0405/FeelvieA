@@ -43,6 +43,12 @@ const NAV_SECTIONS = [
       { to: "/image-history", label: "Generation Logs", icon: History },
     ],
   },
+  {
+    title: "SUBSCRIPTION",
+    items: [
+      { to: "/user-subscriptions", label: "User Subscriptions", icon: GalleryHorizontal },
+    ],
+  }
 ];
 
 export default function Sidebar({ open, onNavigate }) {
@@ -113,15 +119,6 @@ export default function Sidebar({ open, onNavigate }) {
           </div>
         ))}
       </nav>
-
-      {/* Status Footer */}
-      <div className="p-3 m-3 rounded-xl bg-neutral-900/60 border border-neutral-800/60 text-xs">
-        <div className="flex items-center gap-2 text-white text-[11px] font-medium">
-          <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-          All systems operational
-        </div>
-        <p className="text-[10px] text-neutral-500 mt-1 pl-4">Feelvie CRM · v2.0</p>
-      </div>
     </aside>
   );
 }
