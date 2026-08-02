@@ -12,6 +12,7 @@ import {
   Search,
   Command,
 } from "lucide-react";
+import logo from "../../../public/logofeelvie.png"
 
 // Categorized navigation structure matching the UI layout
 const NAV_SECTIONS = [
@@ -61,7 +62,7 @@ export default function Sidebar({ open, onNavigate }) {
       {/* Brand / Logo */}
       <div className="flex items-center gap-3 px-5 py-5">
         <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 border border-white/10 text-white">
-          <Box className="h-5 w-5" />
+          <img src={logo} alt="Feelvie Logo" className="h-full w-full object-contain rounded-md" />
         </div>
         <div>
           <p className="font-semibold text-sm leading-tight text-white">Feelvie</p>
